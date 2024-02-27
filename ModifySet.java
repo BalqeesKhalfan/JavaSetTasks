@@ -11,12 +11,16 @@ public class ModifySet {
         System.out.println("Element of First Set:"+setOne);
         System.out.println("Element of Second Set:"+setTwo);
 
-        // Retain only the elements present in both sets
-        setOne.addAll(setTwo);
+        // Modify set1 to remove elements not found in set2
+        modifySet(setOne, setTwo);
 
         // Print the modified set
         System.out.println("Modified setOne: " + setOne);
 
+    }
+    // Function to modify the first set by removing elements not found in the second set
+    private static void modifySet(Set<Integer> setOne, Set<Integer> setTwo) {
+        setOne.retainAll(setTwo);
     }
 
 }
